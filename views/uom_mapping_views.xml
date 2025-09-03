@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acis_base_uom_mapping_form_view" model="ir.ui.view">
+        <field name="name">acis.base.uom.mapping.list</field>
+        <field name="model">acis.base.uom.mapping</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="True"/>
+                        <field name="uom_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="acis_base_uom_mapping_list_view" model="ir.ui.view">
+        <field name="name">acis.base.uom.mapping.form</field>
+        <field name="model">acis.base.uom.mapping</field>
+        <field name="arch" type="xml">
+            <list string="Maßeinheiten Mapping">
+                <field name="name"/>
+                <field name="uom_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_acis_base_uom_mapping" model="ir.actions.act_window">
+        <field name="name">Maßeinheiten Mapping</field>
+        <field name="res_model">acis.base.uom.mapping</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+<!--    <menuitem id="menu_acis_base_uom_mapping"-->
+<!--              name="SAP Maßeinheiten Mapping"-->
+<!--              parent="menu_acis_lv_operations"-->
+<!--              action="action_acis_base_uom_mapping"-->
+<!--              sequence="10"/>-->
+
+</odoo>

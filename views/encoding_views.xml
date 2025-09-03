@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acis_base_encoding_form_view" model="ir.ui.view">
+        <field name="name">acis.base.encoding.list</field>
+        <field name="model">acis.base.encoding</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="True"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="acis_base_encoding_list_view" model="ir.ui.view">
+        <field name="name">acis.base.encoding.form</field>
+        <field name="model">acis.base.encoding</field>
+        <field name="arch" type="xml">
+            <list string="Encodings">
+                <field name="name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_acis_base_encoding" model="ir.actions.act_window">
+        <field name="name">Encoding</field>
+        <field name="res_model">acis.base.encoding</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_acis_base_encoding"
+              name="Encoding"
+              parent="base.menu_ir_property"
+              action="action_acis_base_encoding"
+              sequence="10"/>
+
+</odoo>

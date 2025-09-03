@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acis_base.access_acis_base_uom_mapping,access_acis_base_uom_mapping,acis_base.model_acis_base_uom_mapping,base.group_user,1,1,1,1
+acis_base.access_acis_base_encoding,access_acis_base_encoding,acis_base.model_acis_base_encoding,base.group_user,1,1,1,1
