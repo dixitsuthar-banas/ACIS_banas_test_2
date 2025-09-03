@@ -8,3 +8,4 @@ class AcisBaseEncoding(models.Model):
     name = fields.Char(string='Encoding Name', required=True, help="E.g. cp850, iso-8859-1")
     description = fields.Char(string='Description')
     active = fields.Boolean(default=True)
+    active = fields.Boolean(default=True)
